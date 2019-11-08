@@ -46,6 +46,9 @@ public class DayNextActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                day++;
+                ((App)getApplication()).setDay(day);
+
                 if(((App)getApplication()).getRoom() ==0 ) // 호텔
                 {
                     ((App)getApplication()).setStamina(((App)getApplication()).getStamina()+2);

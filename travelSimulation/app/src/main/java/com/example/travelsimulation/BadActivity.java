@@ -1,6 +1,7 @@
 package com.example.travelsimulation;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,8 @@ public class BadActivity extends AppCompatActivity {
     Button btnRestart;
     int index;
     int bad[] = {R.drawable.bad_sagosa};
+    MediaPlayer mediaPlayer;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,6 +29,9 @@ public class BadActivity extends AppCompatActivity {
 
         layout = (RelativeLayout) findViewById(R.id.layout_bad);
         layout.setBackgroundResource(bad[index]);
+        mediaPlayer = MediaPlayer.create(BadActivity.this, R.raw.bad_ending);
+        mediaPlayer.start();
+
         btnRestart.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

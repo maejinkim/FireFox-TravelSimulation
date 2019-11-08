@@ -44,6 +44,7 @@ public class ResultActivity extends AppCompatActivity {
 
         layout.setBackgroundResource(place[index][placeIndex]);
         setMsg();
+        getState();
         txtResult.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

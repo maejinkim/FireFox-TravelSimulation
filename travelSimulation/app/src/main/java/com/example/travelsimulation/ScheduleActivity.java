@@ -77,6 +77,8 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
         Button btnSchedule3 = (Button) dlg_layout.findViewById(R.id.btnSchedule3);
         Button btnSchedule4 = (Button) dlg_layout.findViewById(R.id.btnSchedule4);
         Button btnSchedule5 = (Button) dlg_layout.findViewById(R.id.btnSchedule5);
+
+        ((App)getApplication()).setPlace(0);
         btnSchedule1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,6 +115,8 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
         AlertDialog.Builder dlg = new AlertDialog.Builder(this);
         dlg.setView(dlg_layout);
 
+        ((App)getApplication()).setPlace(1);
+
         Button btnSchedule1 = (Button) dlg_layout.findViewById(R.id.btnSchedule1);
         Button btnSchedule2 = (Button) dlg_layout.findViewById(R.id.btnSchedule2);
         Button btnSchedule3 = (Button) dlg_layout.findViewById(R.id.btnSchedule3);
@@ -120,21 +124,21 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
         btnSchedule1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                ShowRes1Dialog();
             }
         });
 
         btnSchedule2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                ShowRes2Dialog();
             }
         });
 
         btnSchedule3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                ShowRes3Dialog();
             }
         });
 
@@ -169,21 +173,21 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
         btnSchedule1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ShowRes1Dialog();
+
             }
         });
 
         btnSchedule2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ShowRes2Dialog();
+
             }
         });
 
         btnSchedule3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ShowRes3Dialog();
+
             }
         });
 
@@ -226,6 +230,25 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
         final LinearLayout dlg_layout = (LinearLayout) View.inflate(this, R.layout.dialog_resturant_res1, null);
         AlertDialog.Builder dlg = new AlertDialog.Builder(this);
         dlg.setView(dlg_layout);
+        Button btnSchedule1 = (Button) dlg_layout.findViewById(R.id.btnSchedule1);
+        Button btnSchedule2 = (Button) dlg_layout.findViewById(R.id.btnSchedule2);
+
+        btnSchedule1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((App)getApplication()).setPlaceIndex(0);
+                startActivity(new Intent(getApplication(), ResturantActivity.class));
+                ScheduleActivity.this.finish();
+
+            }
+        });
+
+        btnSchedule2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
         dlg.show();
     }
 
@@ -235,6 +258,25 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
         final LinearLayout dlg_layout = (LinearLayout) View.inflate(this, R.layout.dialog_resturant_res2, null);
         AlertDialog.Builder dlg = new AlertDialog.Builder(this);
         dlg.setView(dlg_layout);
+        Button btnSchedule1 = (Button) dlg_layout.findViewById(R.id.btnSchedule1);
+        Button btnSchedule2 = (Button) dlg_layout.findViewById(R.id.btnSchedule2);
+
+        btnSchedule1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((App)getApplication()).setPlaceIndex(1);
+                startActivity(new Intent(getApplication(), ResturantActivity.class));
+                ScheduleActivity.this.finish();
+
+            }
+        });
+
+        btnSchedule2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
         dlg.show();
     }
 

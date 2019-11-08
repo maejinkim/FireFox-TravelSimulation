@@ -44,6 +44,8 @@ public class DayActivity extends AppCompatActivity {
         stateImg[1] = (ImageView) findViewById(R.id.imgJoy);
         stateImg[2] = (ImageView) findViewById(R.id.imgStamina);
 
+        ((App)getApplication()).setDayIndex(0);
+
         txtMsg.setText(msg[day][index]);
         index++;
         txtMsg.setOnClickListener(new View.OnClickListener(){
