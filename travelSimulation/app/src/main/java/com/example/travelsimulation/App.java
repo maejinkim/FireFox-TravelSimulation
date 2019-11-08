@@ -11,6 +11,7 @@ public class App extends Application {
     private int hungry;
     private int money;
     private int joy;
+    private int day;
 
     @Override
     public void onCreate() {
@@ -65,5 +66,13 @@ public class App extends Application {
 
     public void setJoy(int joy) {
         this.joy = joy;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
     }
 }

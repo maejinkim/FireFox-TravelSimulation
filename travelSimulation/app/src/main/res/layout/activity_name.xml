@@ -18,7 +18,8 @@
         android:layout_width="100dp"
         android:layout_height="60dp"
         android:text="시작하기"
-        android:fontFamily="@font/font"/>
+        android:fontFamily="@font/font"
+        android:id="@+id/btnStart"/>
 
 
 </LinearLayout>
