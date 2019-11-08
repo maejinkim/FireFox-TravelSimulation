@@ -2,16 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:gravity="center"
+    android:background="@drawable/dialog_back"
     android:layout_height="match_parent">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="가정식 식당 "
+        android:text="가정식 식당"
         android:fontFamily="@font/font"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:textSize="30dp"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:gravity="center"
         android:layout_gravity="left"
         android:layout_marginLeft="30dp"
@@ -22,9 +23,9 @@
         android:layout_height="wrap_content"
         android:text="어디로 갈까?"
         android:fontFamily="@font/font"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:textSize="30dp"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:gravity="center"
         android:layout_gravity="left"
         android:layout_marginLeft="30dp"
@@ -41,7 +42,7 @@
             android:background="@drawable/res03"
             android:layout_margin="10dp"
             android:layout_width="400dp"
-            android:layout_height="150dp"
+            android:layout_height="230dp"
             android:id="@+id/btnSchedule1"
             />
 
@@ -49,7 +50,7 @@
             android:background="@drawable/res04"
             android:layout_margin="10dp"
             android:layout_width="400dp"
-            android:layout_height="150dp"
+            android:layout_height="230dp"
             android:id="@+id/btnSchedule2"
             />
 

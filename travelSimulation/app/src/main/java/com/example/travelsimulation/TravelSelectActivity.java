@@ -25,7 +25,7 @@ public class TravelSelectActivity extends AppCompatActivity implements View.OnCl
     int state[];
 
     String msg[] = {"","입장료를 내고 들어가 볼까?","엄청난 풍경이다.\n사진을 찍어볼까?"};
-    String select1[] = {"", "들어가 본다.","관광객에게 찍어달라고 부탁한다."};
+    String select1[] = {"", "들어가 본다.","누군가에게 찍어달라고 한다."};
     String select2[] = {"", "외부만 구경한다.","그냥 절벽을 구경한다."};
     int travel[] = {R.drawable.casa, R.drawable.cathedral, R.drawable.ronda, R.drawable.monju, R.drawable.guell};
 

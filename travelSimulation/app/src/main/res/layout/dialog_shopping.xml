@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:gravity="center"
+    android:background="@drawable/dialog_back"
     android:layout_height="match_parent">
 
     <TextView
@@ -11,7 +12,7 @@
         android:fontFamily="@font/font"
         android:layout_marginTop="100dp"
         android:textSize="30dp"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:gravity="center"
         android:id="@+id/txtDay"/>
 
