@@ -1,6 +1,7 @@
 package com.example.travelsimulation;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -22,6 +23,7 @@ public class MoneyActivity extends AppCompatActivity implements View.OnClickList
     int index = 0;
     int num = 0;
     boolean check = false;
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,6 +51,8 @@ public class MoneyActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
 
         if (v.getId() == R.id.btnMoney){
+            mediaPlayer = MediaPlayer.create(MoneyActivity.this, R.raw.slotmachine);
+            mediaPlayer.start();
             layout.setBackgroundResource(backgrount[index]);
             index++;
             Handler handler = new Handler();

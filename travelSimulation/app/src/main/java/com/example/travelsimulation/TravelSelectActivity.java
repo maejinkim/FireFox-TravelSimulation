@@ -71,6 +71,7 @@ public class TravelSelectActivity extends AppCompatActivity implements View.OnCl
                 ((App)getApplication()).setResult("핸드폰을 도난당했다!\n\n");
                 ((App)getApplication()).setDownState(1);
                 ((App)getApplication()).setDown(2);
+                ((App)getApplication()).setUpState(-1);
                 startActivity(new Intent(getApplication(), ResultActivity.class));
             }
         }
@@ -78,6 +79,7 @@ public class TravelSelectActivity extends AppCompatActivity implements View.OnCl
             if (index == 1){
                 ((App)getApplication()).setUpState(1);
                 ((App)getApplication()).setUp(1);
+                ((App)getApplication()).setDownState(-1);
                 startActivity(new Intent(getApplication(), ResultActivity.class));
             }
             //절벽 bad

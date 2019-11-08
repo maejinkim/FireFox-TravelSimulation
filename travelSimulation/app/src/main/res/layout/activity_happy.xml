@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bad_asa"
-    android:id="@+id/layout_bad">
+    android:background="@drawable/happy">
 
     <Button
         android:layout_alignParentBottom="true"

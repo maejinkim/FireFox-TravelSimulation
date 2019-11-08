@@ -57,20 +57,11 @@
             />
 
         <Button
-            android:background="@drawable/trv4"
-            android:layout_margin="10dp"
-            android:layout_width="300dp"
-            android:layout_height="70dp"
-            android:id="@+id/btnSchedule5"
-            />
-
-
-        <Button
             android:background="@drawable/trv6"
             android:layout_margin="10dp"
             android:layout_width="300dp"
             android:layout_height="70dp"
-            android:id="@+id/btnSchedule6"
+            android:id="@+id/btnSchedule5"
             />
 
     </LinearLayout>

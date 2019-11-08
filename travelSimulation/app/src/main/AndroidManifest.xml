@@ -31,6 +31,9 @@
         <activity android:name=".AirportActivity"/>
         <activity android:name=".DayActivity"/>
         <activity android:name=".ScheduleActivity"/>
+        <activity android:name=".DayNextActivity"/>
+        <activity android:name=".HappyActivity"/>
+        <activity android:name=".ResturantActivity"/>
     </application>
 
 </manifest>

@@ -1,6 +1,7 @@
 package com.example.travelsimulation;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -16,6 +17,8 @@ public class AirportActivity extends AppCompatActivity implements View.OnClickLi
     String msg[] = {"와! 공항에 도착했다!", "드디어 스페인으로 가는구나!", "스페인에서는 어떤 일이 일어날까?"};
 
     TextView txtMsg;
+    // MediaPlayer 객체생성
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,8 @@ public class AirportActivity extends AppCompatActivity implements View.OnClickLi
 
             if (index == 3){
                 layout.setBackgroundResource(R.drawable.airport_dark);
+                mediaPlayer = MediaPlayer.create(AirportActivity.this, R.raw.airplane);
+                mediaPlayer.start();
                 Handler handler = new Handler();
                 handler.postDelayed(new airportHandler(), 3000);
             }

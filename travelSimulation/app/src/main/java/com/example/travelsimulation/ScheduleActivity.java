@@ -77,7 +77,6 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
         Button btnSchedule3 = (Button) dlg_layout.findViewById(R.id.btnSchedule3);
         Button btnSchedule4 = (Button) dlg_layout.findViewById(R.id.btnSchedule4);
         Button btnSchedule5 = (Button) dlg_layout.findViewById(R.id.btnSchedule5);
-        Button btnSchedule6 = (Button) dlg_layout.findViewById(R.id.btnSchedule6);
         btnSchedule1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -205,6 +204,8 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
         btnSchedule1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent(getApplication(), HappyActivity.class));
+                ScheduleActivity.this.finish();
 
             }
         });

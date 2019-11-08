@@ -41,6 +41,24 @@ public class App extends Application {
 
     }
 
+    public void setAllClear(){
+        stamina = 5;
+        hungry = 5;
+        joy = 5;
+        day = 0;
+        money = 0;
+        dayIndex = 0;
+        msgIndex = 0;
+        upState = -1;
+        downState = -1;
+        result = "";
+        place = 0;
+        placeIndex = 0;
+        up = 0;
+        down = 0;
+
+    }
+
     public int getDayIndex() {
         return dayIndex;
     }

@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ResturantActivity extends AppCompatActivity {
+public class DayNextActivity extends AppCompatActivity {
 
     //hungry, joy, stamina
     RelativeLayout layout;
@@ -18,21 +18,21 @@ public class ResturantActivity extends AppCompatActivity {
     TextView txtMsg, txtMoney;
 
     int state[];
-    int money, travelIndex, index = 0;
+    int money, day;
 
-    int travel[] = {R.drawable.botin, R.drawable.lamiventa};
-    String msg[][] = {{"이곳이 해밍웨이의 단골식당인 Botin!","메인 메뉴인 새끼 돼지 구이를 시켜야지", "정말 훌륭한 맛이야..."},
-            {"여기는 La Mi Venta!", "오늘은 해산물음식을 먹어볼까?", "해산물 빠에야 정말 맛있어!"}};
+    int backIndex;
+    int back[] = {R.drawable.hotel, R.drawable.guesthouse,R.drawable.road};
+    String msg = "숙소로 돌아와서 휴식을 취했다.";
 
-
-
+    @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place);
 
         stateImg = new ImageView[3];
         state = new int[3];
-        travelIndex = ((App)getApplication()).getPlaceIndex();
+        day = ((App)getApplication()).getDay();
+        backIndex = ((App)getApplication()).getRoom();
 
         txtMsg = (TextView) findViewById(R.id.txtMsg);
         txtMoney = (TextView) findViewById(R.id.txtMoney);
@@ -42,37 +42,24 @@ public class ResturantActivity extends AppCompatActivity {
         stateImg[1] = (ImageView) findViewById(R.id.imgJoy);
         stateImg[2] = (ImageView) findViewById(R.id.imgStamina);
 
-        txtMsg.setText(msg[travelIndex][index]);
-        index++;
         txtMsg.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
 
-                if (index == 3){
-                    if (travelIndex == 0){
-                        ((App)getApplication()).setUpState(1);
-                        ((App)getApplication()).setUp(2);
-                        ((App)getApplication()).setDownState(3);
-                        ((App)getApplication()).setDown(15);
-                        startActivity(new Intent(getApplication(), ResultActivity.class));
-                        ResturantActivity.this.finish();
-                    }
-                    else {
-                        ((App)getApplication()).setUpState(1);
-                        ((App)getApplication()).setUp(1);
-                        ((App)getApplication()).setDownState(3);
-                        ((App)getApplication()).setDown(3);
-                        startActivity(new Intent(getApplication(), ResultActivity.class));
-                        ResturantActivity.this.finish();
-                    }
+                if(((App)getApplication()).getRoom() ==0 ) // 호텔
+                {
+                    ((App)getApplication()).setStamina(((App)getApplication()).getStamina()+2);
                 }
-                else {
-                    txtMsg.setText(msg[travelIndex][index]);
-                    index++;
+                else if(((App)getApplication()).getRoom() ==1 ) // 게스트하우
+                {
+                    ((App)getApplication()).setStamina(((App)getApplication()).getStamina()+1);
                 }
+
+                startActivity(new Intent(getApplication(), DayActivity.class));
+                DayNextActivity.this.finish();
             }
         });
-        layout.setBackgroundResource(travel[travelIndex]);
+        layout.setBackgroundResource(back[backIndex]);
         getState();
     }
 
@@ -98,4 +85,5 @@ public class ResturantActivity extends AppCompatActivity {
         txtMoney.setText(String.valueOf(money)+"만원");
 
     }
+
 }

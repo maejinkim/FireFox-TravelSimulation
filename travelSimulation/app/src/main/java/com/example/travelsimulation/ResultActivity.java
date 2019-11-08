@@ -1,6 +1,8 @@
 package com.example.travelsimulation;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -18,7 +20,7 @@ public class ResultActivity extends AppCompatActivity {
     RelativeLayout layout;
     TextView txtResult;
     int index, placeIndex, upState, downState, up, down;
-    int place[][] = {{R.drawable.casa, R.drawable.cathedral, R.drawable.ronda, R.drawable.monju, R.drawable.guell}};
+    int place[][] = {{R.drawable.casa, R.drawable.cathedral, R.drawable.ronda},{R.drawable.botin, R.drawable.lamiventa}};
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,6 +44,20 @@ public class ResultActivity extends AppCompatActivity {
 
         layout.setBackgroundResource(place[index][placeIndex]);
         setMsg();
+        txtResult.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                int dayIndex = ((App)getApplication()).getDayIndex();
+                dayIndex++;
+                if (dayIndex == 3)
+                    startActivity(new Intent(getApplication(),DayNextActivity.class));
+                else{
+                    ((App)getApplication()).setDayIndex(dayIndex);
+                    startActivity(new Intent(getApplication(), ScheduleActivity.class));
+                }
+
+            }
+        });
     }
 
     void setMsg(){
@@ -80,18 +96,18 @@ public class ResultActivity extends AppCompatActivity {
 
                         if (downState != -1){
                             if (downState == 0){
-                                ((App)getApplication()).setHungry(hungry+down);
+                                ((App)getApplication()).setHungry(hungry-down);
                                 str += "배부름이 " + String.valueOf(down) + " 하락했습니다.\n";
                             }else if (downState == 1){
-                                ((App)getApplication()).setJoy(joy+down);
+                                ((App)getApplication()).setJoy(joy-down);
                                 str += "즐거움이 " + String.valueOf(down) + " 하락했습니다.\n";
 
                             }else if (downState == 2){
-                                ((App)getApplication()).setStamina(stamina+down);
+                                ((App)getApplication()).setStamina(stamina-down);
                                 str += "체력이 " + String.valueOf(down) + " 하락했습니다.\n";
 
                             }else if (downState == 3){
-                                ((App)getApplication()).setMoney(money+down);
+                                ((App)getApplication()).setMoney(money-down);
                                 str += "경비를 " + String.valueOf(down) + "만원 사용했습니다.\n";
 
                             }
