@@ -131,11 +131,13 @@
 
         <Button
             android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:id="@+id/btnSelect1"/>
+            android:layout_height="80dp"
+            android:id="@+id/btnSelect1"
+            android:background="@drawable/btn1"/>
         <Button
             android:layout_width="300dp"
-            android:layout_height="50dp"
+            android:layout_height="80dp"
+            android:background="@drawable/btn2"
             android:id="@+id/btnSelect2"/>
 
     </LinearLayout>
