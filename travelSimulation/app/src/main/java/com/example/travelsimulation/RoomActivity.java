@@ -64,7 +64,7 @@ public class RoomActivity extends AppCompatActivity implements View.OnClickListe
 
         }
         else if (v.getId() == R.id.btnGuesthouse){
-            if(room == 1)
+            if(room != 1)
             {
                 layout.setBackgroundResource(R.drawable.guesthouse);
                 btnGuesthouse.setBackgroundResource(R.drawable.guesthouse2);
@@ -80,7 +80,7 @@ public class RoomActivity extends AppCompatActivity implements View.OnClickListe
 
         }
         else if (v.getId() == R.id.btnRoad) {
-            if(room == 2)
+            if(room != 2)
             {
                 layout.setBackgroundResource(R.drawable.road);
                 btnRoad.setBackgroundResource(R.drawable.road2);
