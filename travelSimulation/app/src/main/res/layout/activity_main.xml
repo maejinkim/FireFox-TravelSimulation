@@ -1,50 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity"
+android:background="@drawable/room">
+
+
+<TextView
+    android:layout_alignParentBottom="true"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/room">
-
-
-<!--    <GridLayout-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="vertical"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_alignParentRight="true"-->
-<!--        android:layout_margin="20dp"-->
-<!--        android:background="#ffffff">-->
-
-<!--        <TextView-->
-<!--            android:layout_height="20dp"-->
-<!--            android:text="체력: 100"/>-->
-<!--        <TextView-->
-<!--            android:layout_height="20dp"-->
-<!--            android:text="즐거움: 100"/>-->
-<!--        <TextView-->
-<!--            android:layout_height="20dp"-->
-<!--            android:text="배고픔: 100"/>-->
-<!--        <TextView-->
-<!--            android:layout_height="20dp"-->
-<!--            android:text="돈: 100"/>-->
-
-
-<!--    </GridLayout>-->
-
-
-    <TextView
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_margin="10dp"
-        android:layout_height="180dp"
-        android:text="테스트 중입니다."
-        android:textSize="30dp"
-        android:gravity="center"
-        android:textColor="#ffffff"
-        android:background="@drawable/msg"
-        android:fontFamily="@font/jalnan"
-        android:id="@+id/txtMsg"/>
+    android:layout_margin="10dp"
+    android:layout_height="180dp"
+    android:text="테스트 중입니다."
+    android:textSize="30dp"
+    android:gravity="center"
+    android:textColor="#ffffff"
+    android:background="@drawable/msg"
+    android:fontFamily="@font/jalnan"
+    android:id="@+id/txtMsg"/>
 
 
 </RelativeLayout>

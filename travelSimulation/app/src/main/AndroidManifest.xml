@@ -28,6 +28,9 @@
         <activity android:name=".TravelSelectActivity"/>
         <activity android:name=".ResultActivity"/>
         <activity android:name=".BadActivity"/>
+        <activity android:name=".AirportActivity"/>
+        <activity android:name=".DayActivity"/>
+        <activity android:name=".ScheduleActivity"/>
     </application>
 
 </manifest>

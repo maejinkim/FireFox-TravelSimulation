@@ -1,33 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#FFFFFF"
-    android:gravity="center">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="현재 시간 오전 9시"
-            android:fontFamily="@font/font"
-            android:layout_marginTop="100dp"
-            android:textSize="30dp"
-            android:textColor="#FF6B6B"
-            android:gravity="center"
-            android:id="@+id/txtDay"/>
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="스케쥴을 선택해주세요!"
-            android:fontFamily="@font/font"
-            android:textSize="20dp"
-            android:gravity="center"
-            android:textColor="#000000"/>
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="관광지를 선택해주세요!"
+        android:fontFamily="@font/font"
+        android:layout_marginTop="100dp"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:id="@+id/txtDay"/>
 
 
     <LinearLayout
@@ -37,7 +23,7 @@
         android:gravity="center">
 
         <Button
-            android:background="@drawable/btn_travel"
+            android:background="@drawable/btn_casa"
             android:layout_margin="10dp"
             android:layout_width="300dp"
             android:layout_height="70dp"
@@ -45,7 +31,7 @@
             />
 
         <Button
-            android:background="@drawable/btn_res"
+            android:background="@drawable/trv1"
             android:layout_margin="10dp"
             android:layout_width="300dp"
             android:layout_height="70dp"
@@ -53,15 +39,17 @@
             />
 
         <Button
-            android:background="@drawable/btn_shop"
+            android:background="@drawable/trv5"
             android:layout_margin="10dp"
             android:layout_width="300dp"
             android:layout_height="70dp"
             android:id="@+id/btnSchedule3"
             />
 
+
+
         <Button
-            android:background="@drawable/btn_rest"
+            android:background="@drawable/trv3"
             android:layout_margin="10dp"
             android:layout_width="300dp"
             android:layout_height="70dp"
@@ -69,7 +57,7 @@
             />
 
         <Button
-            android:background="@drawable/btn_back"
+            android:background="@drawable/trv4"
             android:layout_margin="10dp"
             android:layout_width="300dp"
             android:layout_height="70dp"
@@ -77,11 +65,15 @@
             />
 
 
+        <Button
+            android:background="@drawable/trv6"
+            android:layout_margin="10dp"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:id="@+id/btnSchedule6"
+            />
 
     </LinearLayout>
-
-
-    
 
 
 </LinearLayout>

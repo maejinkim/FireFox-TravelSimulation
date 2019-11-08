@@ -10,6 +10,7 @@ public class App extends Application {
     private int money;      //여행경비
     private int joy;        //즐거움
     private int day;        //날짜
+    private int dayIndex;   //날짜 인덱스
     private int room;       //숙소 선택
     private int place;      //활동 선택
     private int placeIndex; //그 중 어떤 활동?
@@ -21,20 +22,31 @@ public class App extends Application {
     private int bad;
     private String result;
 
+
+
     @Override
     public void onCreate() {
         super.onCreate();
         stamina = 5;
         hungry = 5;
         joy = 5;
-        day = 1;
+        day = 0;
         money = 0;
+        dayIndex = 0;
         msgIndex = 0;
         upState = -1;
         downState = -1;
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
 
+    }
+
+    public int getDayIndex() {
+        return dayIndex;
+    }
+
+    public void setDayIndex(int dayIndex) {
+        this.dayIndex = dayIndex;
     }
 
     public String getResult() {

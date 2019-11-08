@@ -106,6 +106,7 @@ public class RoomActivity extends AppCompatActivity implements View.OnClickListe
                     money -= 30;
                 }
                 ((App)getApplication()).setMoney(money);
+                ((App)getApplication()).setRoom(room);
                 startActivity(new Intent(getApplication(), MainActivity.class));
                 this.finish();
             }
