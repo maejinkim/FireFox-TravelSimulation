@@ -30,7 +30,7 @@ public class NameActivity extends AppCompatActivity {
                     Toast.makeText(getApplication(), "이름을 입력해주세요!", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    ((App)getApplication()).setName(name);
+                    //((App)getApplication()).setName(name);
                     startActivity(new Intent(getApplication(), MainActivity.class));
                     NameActivity.this.finish();
                 }

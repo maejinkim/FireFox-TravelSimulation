@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="숙소는 어떻게 할까?"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:fontFamily="@font/jalnan"
+        android:id="@+id/txtMsg"/>
+
+    <Button
+        android:layout_marginTop="100dp"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:fontFamily="@font/font"
+        android:background="@drawable/hotel1"
+        android:id="@+id/btnHotel"/>
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:background="@drawable/guesthouse1"
+        android:fontFamily="@font/font"
+        android:id="@+id/btnGuesthouse"/>
+
+    <Button
+
+        android:layout_marginTop="30dp"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:background="@drawable/road1"
+        android:fontFamily="@font/font"
+        android:id="@+id/btnRoad"/>
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:background="@drawable/finish1"
+        android:fontFamily="@font/font"
+        android:id="@+id/btnFinish"/>
+
+
+</LinearLayout>

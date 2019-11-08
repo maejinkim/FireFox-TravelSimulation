@@ -5,7 +5,7 @@ import android.os.StrictMode;
 
 public class App extends Application {
 
-    private String name;
+    //private String name;
     private int gender;
     private int stamina;
     private int hungry;
@@ -20,13 +20,13 @@ public class App extends Application {
         StrictMode.setVmPolicy(builder.build());
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
 
     public int getGender() {
         return gender;

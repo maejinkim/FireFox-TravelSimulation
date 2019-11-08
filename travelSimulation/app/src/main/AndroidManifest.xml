@@ -21,6 +21,8 @@
         <activity android:name=".MainActivity"/>
         <activity android:name=".OpenActivity"/>
         <activity android:name=".NameActivity"/>
+        <activity android:name=".MoneyActivity"/>
+        <activity android:name=".RoomActivity"/>
     </application>
 
 </manifest>

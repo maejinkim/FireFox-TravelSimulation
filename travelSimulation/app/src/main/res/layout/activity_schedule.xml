@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:id="@+id/scheduleTitle"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="30dp">
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:gravity="center">
 
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:layout_marginRight="30dp"
-            android:text="Day 1"
+            android:layout_height="wrap_content"
+            android:text="현재 시간 오전 9시"
             android:fontFamily="@font/font"
+            android:layout_marginTop="100dp"
             android:textSize="30dp"
             android:textColor="#FF6B6B"
             android:gravity="center"
@@ -27,84 +20,68 @@
 
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:gravity="center"
-            android:text="10:00 AM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="스케쥴을 선택해주세요!"
             android:fontFamily="@font/font"
             android:textSize="20dp"
-            android:textColor="#000000"
-            android:id="@+id/txtTime"/>
+            android:gravity="center"
+            android:textColor="#000000"/>
 
-    </LinearLayout>
-
-    
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_below="@+id/scheduleTitle"
-        android:layout_above="@+id/txtSchedule"
-        android:gravity="center"
-        android:layout_centerHorizontal="true"
-        >
+        android:gravity="center">
 
         <Button
-            android:text="6:00 AM"
+            android:text="관광"
+            android:layout_margin="10dp"
             android:layout_width="300dp"
             android:layout_height="70dp"
             android:id="@+id/btnSchedule1"
             />
+
         <Button
-            android:text="9:00 PM"
+            android:text="식사"
+            android:layout_margin="10dp"
             android:layout_width="300dp"
             android:layout_height="70dp"
             android:id="@+id/btnSchedule2"
             />
+
         <Button
-            android:text="12:00 PM"
+            android:text="쇼핑"
+            android:layout_margin="10dp"
             android:layout_width="300dp"
             android:layout_height="70dp"
             android:id="@+id/btnSchedule3"
             />
+
         <Button
-            android:text="3:00 PM"
+            android:text="휴식"
+            android:layout_margin="10dp"
             android:layout_width="300dp"
             android:layout_height="70dp"
             android:id="@+id/btnSchedule4"
             />
+
         <Button
-            android:text="6:00 PM"
+            android:text="돌아가기"
+            android:layout_margin="10dp"
             android:layout_width="300dp"
             android:layout_height="70dp"
             android:id="@+id/btnSchedule5"
             />
-        <Button
-            android:text="9:00 PM"
-            android:layout_width="300dp"
-            android:layout_height="70dp"
-            android:id="@+id/btnSchedule6"
-            />
-
 
 
 
     </LinearLayout>
-    
-    
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_margin="10dp"
-        android:text="스케쥴을 선택해주세요!"
-        android:fontFamily="@font/font"
-        android:textSize="20dp"
-        android:gravity="center"
-        android:textColor="#000000"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/txtSchedule"/>
+
+
     
 
 
-</RelativeLayout>
+</LinearLayout>

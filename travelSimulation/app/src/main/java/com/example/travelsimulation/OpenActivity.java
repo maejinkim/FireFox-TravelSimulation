@@ -29,7 +29,7 @@ public class OpenActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
 
         if (v.getId() == R.id.btnNew){
-            startActivity(new Intent(getApplication(), NameActivity.class));
+            startActivity(new Intent(getApplication(), MainActivity.class));
             this.finish();
         }
         else if (v.getId() == R.id.btnPre){
