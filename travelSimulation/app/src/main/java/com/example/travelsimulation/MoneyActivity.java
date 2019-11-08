@@ -21,6 +21,7 @@ public class MoneyActivity extends AppCompatActivity implements View.OnClickList
     int money;
     int index = 0;
     int num = 0;
+    boolean check = false;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -76,20 +77,34 @@ public class MoneyActivity extends AppCompatActivity implements View.OnClickList
                 handler.postDelayed(new moneyhandler(), 50*num);
             }
         }
+
     }
 
     private class nexthandler implements Runnable {
         @Override
         public void run() {
 
-            if (money == 2)
-                ((App)getApplication()).setMoney(100);
-            else if (money == 4)
-                ((App)getApplication()).setMoney(200);
-            else
-                ((App)getApplication()).setMoney(300);
-            startActivity(new Intent(getApplication(), MainActivity.class));
-            MoneyActivity.this.finish();
+            if (check){
+                startActivity(new Intent(getApplication(), MainActivity.class));
+                MoneyActivity.this.finish();
+            }
+            else {
+                if (money == 2){
+                    ((App)getApplication()).setMoney(100);
+                    layout.setBackgroundResource(R.drawable.money100);
+                }
+                else if (money == 4) {
+                    ((App) getApplication()).setMoney(200);
+                    layout.setBackgroundResource(R.drawable.money200);
+                }
+                else {
+                    ((App) getApplication()).setMoney(300);
+                    layout.setBackgroundResource(R.drawable.money300);
+                }
+                check = true;
+                Handler handler = new Handler();
+                handler.postDelayed(new nexthandler(), 1000);
+            }
         }
     }
 

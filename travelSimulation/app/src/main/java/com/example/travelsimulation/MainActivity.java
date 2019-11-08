@@ -29,6 +29,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (msgIndex == 3)
         {
             txtMsg.setText("공항으로 떠나자!");
+            ((App) getApplication()).setPlace(0);
+            ((App) getApplication()).setPlaceIndex(2);
+            startActivity(new Intent(getApplication(), TravelActivity.class));
+
         }
         else {
             if (msgIndex == 2)

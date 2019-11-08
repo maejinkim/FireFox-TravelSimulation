@@ -39,7 +39,7 @@
         android:layout_margin="10dp"
         android:layout_height="180dp"
         android:text="테스트 중입니다."
-        android:textSize="20dp"
+        android:textSize="30dp"
         android:gravity="center"
         android:textColor="#ffffff"
         android:background="@drawable/msg"

@@ -24,6 +24,10 @@
         <activity android:name=".MoneyActivity"/>
         <activity android:name=".RoomActivity"/>
         <activity android:name=".CountryActivity"/>
+        <activity android:name=".TravelActivity"/>
+        <activity android:name=".TravelSelectActivity"/>
+        <activity android:name=".ResultActivity"/>
+        <activity android:name=".BadActivity"/>
     </application>
 
 </manifest>
