@@ -5,19 +5,26 @@
     android:background="@drawable/main4"
     android:gravity="center">
 
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="@drawable/logo"
+        android:layout_margin="10dp"/>
 
     <Button
-        android:layout_width="200dp"
-        android:layout_height="80dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:text="새로 시작하기"
+        android:layout_margin="10dp"
         android:fontFamily="@font/font"
         android:background="#F8BCA9"
         android:id="@+id/btnNew"/>
 
     <Button
-        android:layout_width="200dp"
-        android:layout_height="80dp"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
         android:background="#ffffff"
+        android:layout_margin="10dp"
         android:text="이전 여행 불러오기"
         android:fontFamily="@font/font"
         android:id="@+id/btnPre"/>

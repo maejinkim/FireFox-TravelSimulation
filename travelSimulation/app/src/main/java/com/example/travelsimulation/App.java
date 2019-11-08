@@ -5,35 +5,38 @@ import android.os.StrictMode;
 
 public class App extends Application {
 
-    //private String name;
-    private int gender;
     private int stamina;
     private int hungry;
     private int money;
     private int joy;
     private int day;
+    private int room;
+    private int msgIndex;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        money = 0;
+        msgIndex = 0;
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
+
     }
 
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-
-    public int getGender() {
-        return gender;
+    public int getMsgIndex() {
+        return msgIndex;
     }
 
-    public void setGender(int gender) {
-        this.gender = gender;
+    public void setMsgIndex(int msgIndex) {
+        this.msgIndex = msgIndex;
+    }
+
+    public int getRoom() {
+        return room;
+    }
+
+    public void setRoom(int room) {
+        this.room = room;
     }
 
     public int getStamina() {

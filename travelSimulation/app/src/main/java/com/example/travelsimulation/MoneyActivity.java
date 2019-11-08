@@ -1,7 +1,9 @@
 package com.example.travelsimulation;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -9,13 +11,15 @@ import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Random;
+
 public class MoneyActivity extends AppCompatActivity implements View.OnClickListener{
 
     LinearLayout layout;
     Button btnStart;
-    int backgrount[] = {R.drawable.money1, R.drawable.money2, R.drawable.money3, R.drawable.money4, R.drawable.money5, R.drawable.money6};
-    int index;
-    int speed = 100;
+    int backgrount[] = {R.drawable.money1, R.drawable.money6, R.drawable.money5, R.drawable.money4, R.drawable.money3, R.drawable.money2};
+    int money;
+    int index = 0;
     int num = 0;
 
     @Override
@@ -24,8 +28,16 @@ public class MoneyActivity extends AppCompatActivity implements View.OnClickList
 
         setContentView(R.layout.activity_money);
 
-        double random = Math.random();
-        index = (int) (random * 6);
+        Random random = new Random();
+        money = random.nextInt(3);
+
+        Log.d("index: ",String.valueOf(money));
+
+        if (money != 2)
+            money+=4;
+
+
+        Log.d("index: ",String.valueOf(money));
 
         layout = (LinearLayout) findViewById(R.id.layout_money);
         btnStart = (Button) findViewById(R.id.btnMoney);
@@ -34,15 +46,51 @@ public class MoneyActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-        for (int i = 0; i < 5; i++){
-            for (int j = 0; j < 6; j++){
-                layout.setBackgroundResource(backgrount[j]);
-                try{
-                    Thread.sleep(100+50*i);
-                }catch (InterruptedException e){
-                    e.printStackTrace();;
-                }
+
+        if (v.getId() == R.id.btnMoney){
+            layout.setBackgroundResource(backgrount[index]);
+            index++;
+            Handler handler = new Handler();
+            handler.postDelayed(new moneyhandler(), 50*num);
+        }
+    }
+
+    private class moneyhandler implements Runnable{
+        @Override
+        public void run() {
+
+            if (index == 6){
+                num++;
+                index = 0;
+            }
+
+            layout.setBackgroundResource(backgrount[index]);
+
+            if (num == 4 && index == money){
+                Handler handler = new Handler();
+                handler.postDelayed(new nexthandler(), 500);
+            }
+            else {
+                index++;
+                Handler handler = new Handler();
+                handler.postDelayed(new moneyhandler(), 50*num);
             }
         }
     }
+
+    private class nexthandler implements Runnable {
+        @Override
+        public void run() {
+
+            if (money == 2)
+                ((App)getApplication()).setMoney(100);
+            else if (money == 4)
+                ((App)getApplication()).setMoney(200);
+            else
+                ((App)getApplication()).setMoney(300);
+            startActivity(new Intent(getApplication(), MainActivity.class));
+            MoneyActivity.this.finish();
+        }
+    }
+
 }

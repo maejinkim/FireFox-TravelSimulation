@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,10 +23,9 @@ public class RoomActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnGuesthouse;
     private Button btnRoad;
     private Button btnFinish;
+    private LinearLayout layout;
 
-    private boolean check_hotel;
-    private boolean check_guesthouse;
-    private boolean check_road;
+    int room = 5;
     private boolean check_finish;
 
 
@@ -34,6 +34,7 @@ public class RoomActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room);
 
+        layout = (LinearLayout) findViewById(R.id.layout_room);
         btnHotel = (Button) findViewById(R.id.btnHotel);
         btnGuesthouse = (Button) findViewById(R.id.btnGuesthouse);
         btnRoad = (Button) findViewById(R.id.btnRoad);
@@ -42,72 +43,72 @@ public class RoomActivity extends AppCompatActivity implements View.OnClickListe
         btnHotel.setOnClickListener(this);
         btnGuesthouse.setOnClickListener(this);
         btnRoad.setOnClickListener(this);
-        check_hotel = false;
-        check_guesthouse = false ;
-        check_road = false ;
         check_finish = false;
-
-        Intent intent = getIntent(); /*데이터 수신*/
 
     }
 
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.btnHotel){
-            if(check_hotel == false )
-            {
+
+            if(room != 0) {
                 btnHotel.setBackgroundResource(R.drawable.hotel2);
-                check_hotel = true;
+                layout.setBackgroundResource(R.drawable.hotel);
+                room = 0;
             }
-            else
-            {
+            else {
+                layout.setBackgroundResource(R.drawable.room);
                 btnHotel.setBackgroundResource(R.drawable.hotel1);
-                check_hotel = false;
+                room = 5;
             }
 
         }
         else if (v.getId() == R.id.btnGuesthouse){
-            if(check_guesthouse == false )
+            if(room == 1)
             {
+                layout.setBackgroundResource(R.drawable.guesthouse);
                 btnGuesthouse.setBackgroundResource(R.drawable.guesthouse2);
-                check_guesthouse = true;
+                room = 1;
             }
             else
             {
+                layout.setBackgroundResource(R.drawable.room);
                 btnGuesthouse.setBackgroundResource(R.drawable.guesthouse1);
-                check_guesthouse = false;
+                room = 5;
 
             }
 
         }
         else if (v.getId() == R.id.btnRoad) {
-            if(check_road == false )
+            if(room == 2)
             {
+                layout.setBackgroundResource(R.drawable.road);
                 btnRoad.setBackgroundResource(R.drawable.road2);
-                check_road = true;
+                room = 2;
             }
             else
             {
+                layout.setBackgroundResource(R.drawable.room);
                 btnRoad.setBackgroundResource(R.drawable.road1);
-                check_road = false;
+                room = 5;
 
             }
 
         }
         else if (v.getId() == R.id.btnFinish) {
-            if(check_finish == false )
+            if(room != 5)
             {
-                btnFinish.setBackgroundResource(R.drawable.finish3);
-                check_finish = true;
+                int money = ((App)getApplication()).getMoney();
+                if (room == 0){
+                    money -= 50;
+                }
+                else if (room == 1){
+                    money -= 30;
+                }
+                ((App)getApplication()).setMoney(money);
+                startActivity(new Intent(getApplication(), MainActivity.class));
+                this.finish();
             }
-            else
-            {
-                btnFinish.setBackgroundResource(R.drawable.finish1);
-                check_finish = false;
-
-            }
-
         }
-
     }
 }

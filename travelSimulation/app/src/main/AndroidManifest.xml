@@ -23,6 +23,7 @@
         <activity android:name=".NameActivity"/>
         <activity android:name=".MoneyActivity"/>
         <activity android:name=".RoomActivity"/>
+        <activity android:name=".CountryActivity"/>
     </application>
 
 </manifest>

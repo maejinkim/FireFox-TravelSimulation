@@ -2,9 +2,57 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/layout_country">
+    android:id="@+id/country"
+    android:background="@drawable/countryback"
+
+    android:gravity="center">
 
 
+    <TextView
+        android:id="@+id/txtMsg"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="30dp"
+        android:fontFamily="@font/jalnan"
+        android:layout_gravity="left"
+        android:text="나라는\n어떻게\n할까?"
+        android:textColor="#FFFFFF"
+        android:textSize="50dp" />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:fontFamily="@font/font"
+        android:background="@drawable/spain1"
+        android:id="@+id/btnSpain"/>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:background="@drawable/china1"
+        android:fontFamily="@font/font"
+        android:id="@+id/btnChina"/>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:background="@drawable/usa1"
+        android:fontFamily="@font/font"
+        android:id="@+id/btnUSA"/>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:background="@drawable/vietnam1"
+        android:fontFamily="@font/font"
+        android:id="@+id/btnVietnam"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:background="@drawable/finish1"
+        android:fontFamily="@font/font"
+        android:id="@+id/btnFinish"/>
 
 
 </LinearLayout>
