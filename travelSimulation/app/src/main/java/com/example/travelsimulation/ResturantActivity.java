@@ -50,7 +50,7 @@ public class ResturantActivity extends AppCompatActivity {
 
                 if (index == 3){
                     if (travelIndex == 0){
-                        ((App)getApplication()).setUpState(1);
+                        ((App)getApplication()).setUpState(0);
                         ((App)getApplication()).setUp(2);
                         ((App)getApplication()).setDownState(3);
                         ((App)getApplication()).setDown(15);
@@ -58,7 +58,7 @@ public class ResturantActivity extends AppCompatActivity {
                         ResturantActivity.this.finish();
                     }
                     else {
-                        ((App)getApplication()).setUpState(1);
+                        ((App)getApplication()).setUpState(0);
                         ((App)getApplication()).setUp(1);
                         ((App)getApplication()).setDownState(3);
                         ((App)getApplication()).setDown(3);

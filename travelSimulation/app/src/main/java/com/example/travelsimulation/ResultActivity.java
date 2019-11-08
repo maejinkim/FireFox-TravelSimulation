@@ -125,6 +125,56 @@ public class ResultActivity extends AppCompatActivity {
                                 "배부름이 1 하락했습니다.");
                     }
                     break;
+
+                case 1:         //관광지
+                    if (upState != -1 || downState != -1){
+
+                        String str = "";
+
+                        up = ((App)getApplication()).getUp();
+                        down = ((App)getApplication()).getDown();
+
+                        if (upState != -1){
+                            if (upState == 0){
+                                ((App)getApplication()).setHungry(hungry+up);
+                                str += "배부름이 " + String.valueOf(up) + " 상승했습니다.\n\n";
+                            }else if (upState == 1){
+                                ((App)getApplication()).setJoy(joy+up);
+                                str += "즐거움이 " + String.valueOf(up) + " 상승했습니다.\n\n";
+
+                            }else if (upState == 2){
+                                ((App)getApplication()).setStamina(stamina+up);
+                                str += "체력이 " + String.valueOf(up) + " 상승했습니다.\n\n";
+
+                            }else if (upState == 3){
+                                ((App)getApplication()).setMoney(money+up);
+                                str += "경비를 " + String.valueOf(up) + "만원 얻었습니다.\n\n";
+
+                            }
+                        }
+
+                        if (downState != -1){
+                            if (downState == 0){
+                                ((App)getApplication()).setHungry(hungry-down);
+                                str += "배부름이 " + String.valueOf(down) + " 하락했습니다.\n";
+                            }else if (downState == 1){
+                                ((App)getApplication()).setJoy(joy-down);
+                                str += "즐거움이 " + String.valueOf(down) + " 하락했습니다.\n";
+
+                            }else if (downState == 2){
+                                ((App)getApplication()).setStamina(stamina-down);
+                                str += "체력이 " + String.valueOf(down) + " 하락했습니다.\n";
+
+                            }else if (downState == 3){
+                                ((App)getApplication()).setMoney(money-down);
+                                str += "경비를 " + String.valueOf(down) + "만원 사용했습니다.\n";
+
+                            }
+                        }
+
+                        txtResult.setText(str);
+                    }
+                    break;
             }
 
             getState();

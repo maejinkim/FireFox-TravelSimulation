@@ -42,6 +42,7 @@ public class DayNextActivity extends AppCompatActivity {
         stateImg[1] = (ImageView) findViewById(R.id.imgJoy);
         stateImg[2] = (ImageView) findViewById(R.id.imgStamina);
 
+        txtMsg.setText(msg);
         txtMsg.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

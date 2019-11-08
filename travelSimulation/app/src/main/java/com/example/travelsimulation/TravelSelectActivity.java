@@ -60,6 +60,7 @@ public class TravelSelectActivity extends AppCompatActivity implements View.OnCl
     public void onClick(View v) {
         if (v.getId() == R.id.btnSelect1){
             if (index == 1){
+                ((App)getApplication()).setResult("정말 아름다운걸! 들어오길 잘했어!\n\n");
                 ((App)getApplication()).setDownState(3);
                 ((App)getApplication()).setDown(5);
                 ((App)getApplication()).setUpState(1);
@@ -77,6 +78,7 @@ public class TravelSelectActivity extends AppCompatActivity implements View.OnCl
         }
         else if (v.getId() == R.id.btnSelect2){
             if (index == 1){
+                ((App)getApplication()).setResult("조금 아쉽네!\n\n");
                 ((App)getApplication()).setUpState(1);
                 ((App)getApplication()).setUp(1);
                 ((App)getApplication()).setDownState(-1);
