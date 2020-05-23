@@ -12,10 +12,10 @@
 
 ### Team
 
-[Haejin](https://github.com/maejinkim) 
+[HaeJin](https://github.com/maejinkim) 
 
-[Dasom](https://github.com/toror33)
+[DaSom](https://github.com/toror33)
 
-[Taehee](https://github.com/kthsarah1)
+[TaeHee](https://github.com/kthsarah1)
 
-[Sangyun]()
+[SangYoon](https://github.com/SANGYOONLEE)
