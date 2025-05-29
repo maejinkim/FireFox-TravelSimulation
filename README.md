@@ -12,7 +12,7 @@
 
 ### Team
 
-[HaeJin](https://github.com/maejinkim) 
+[HyeJin](https://github.com/maejinkim) 
 
 [DaSom](https://github.com/toror33)
 
